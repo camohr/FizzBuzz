@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>A Coding Project by Chris Mohrbacher</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="fa/css/all.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">     
+
+    <link href="img/socialmedia/favicon/favicon-32x32.png" type="image/png" rel="icon">
+
+    <link href="prism/prism.css" rel="stylesheet">
+
+    <link href="css/site.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <!-- ==== Nav ==== -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand logoFont" href="#">
+                <img src="img/socialmedia/favicon/favicon.ico" class="d-inline-block align-text-bottom" alt="Chris Mohrbacher" width="30" height="24">
+                &nbsp;MOHRBY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="app.html">The App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==== Main ==== -->
+    <main class="flex-shrink-0">
+        <div class="container py-4 px-5 mt-5">
+            <h2 class="border-1 border-bottom border-dark">The Code for APTLYNAMED</h2>
+            <div class="row mt-5 row-cols-1 row-cols-lg-2">
+                <div class="col-lg-8">
+                    <pre class="line-numbers">
+                        <code class="language-javascript">
+                            // controller
+                            function getValues() {
+                            
+                                let sv = parseInt (document.getElementById ("startValue").value);
+                                let ev = parseInt (document.getElementById("endValue").value);
+                            
+                                if (!Number.isInteger(sv) || !Number.isInteger(ev)) {
+                                    alert ("Please enter a number only.")
+                                    return;
+                                }
+                            
+                                let numbers = generateNumbers (sv, ev);
+                                displayNumbers (numbers);
+                            }
+                            
+                            // logic
+                            function generateNumbers (start, end) {
+                                if (end < start)  // ensure start less than end
+                                {
+                                    let m = end;
+                                    end = start;
+                                    start = m;
+                                }
+                                let numbers = [];
+                                for (let i = start; i <= end; i++) {
+                                    numbers.push(i);
+                                }
+                                return numbers;
+                            }
+                            
+                            // display
+                            function displayNumbers(numbers) {
+                            
+                                let trows = "";
+                            
+                                for (let i = 0; i<numbers.length; i++) {
+                                    let n = numbers[i];
+                                    let className = "";
+                                    if (n % 2)
+                                        className = "odd";
+                                    else
+                                        className = "even";
+                                    trows += `&lt;tr>&lt;td class="${className}"&gt;${n}&lt;/td&gt;&lt;/tr&gt;\n`;
+                                }
+                                document.getElementById ("resbody").innerHTML = trows;
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Three functions</h3>
+                    <br>
+                    <h5>getValues()</h5>
+                    <p>Called by onclick event of btnSubmit in app.html.
+                       Reads the values that were entered in the start and end controls.</p>
+
+                    <h5>generateNumbers()</h5>
+                    <p>Creates a list of sequential numbers based on the start and end values.</p>
+
+                    <h5>displayNumbers()</h5>
+                    <p>Uses the list of numbers to create an array of table data elements.
+                       Injects the created data elements into the table's body.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==== Footer ==== -->
+    <footer class="footer mt-auto py-3 sticky-footer">  <!-- sticky-footer not in lesson  -->
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-3 gy-1">
+                <div class="col d-flex order-last order-lg-first text-light">
+                    <div>
+                        <span class="text-muted">&copy;2022 Chris Mohrbacher</span><br>
+                        <a class="social-link" href="mailto:camohr2012@gmail.com">camohr2012@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-center social">
+                    <a href="https://www.linkedin.com/in/chris-mohrbacher-b005927a" target="_blank">
+                        <img class="social-link" src="img/socialmedia/cm.png" alt="Chris Mohrbacher"> </a>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://github.com/camohr/mohrbacher" target="_blank">
+                                <i class="social-link fab fa-github fa-2x"> </i> </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/chris-mohrbacher-b005927a" target="_blank">
+                                <i class="social-link fab fa-linkedin fa-2x"> </i> </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <i class="social-link fab fa-twitter fa-2x"> </i> </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com" target="_blank">
+                                <i class="social-link fab fa-instagram fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==== Boostrap JS ==== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <script src="prism/prism.js"></script>
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true
+        })
+    </script>
+
+</body>
+</html>

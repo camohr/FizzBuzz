@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>A Coding Project by Chris Mohrbacher</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="fa/css/all.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">     
+
+    <link href="img/socialmedia/favicon/favicon-32x32.png" type="image/png" rel="icon">
+
+    <link href="css/site.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+    
+    <!-- ==== Nav ==== -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand logoFont" href="#">
+                <img src="img/socialmedia/favicon/favicon.ico" class="d-inline-block align-text-bottom" alt="Chris Mohrbacher" width="30" height="24">
+                &nbsp;MOHRBY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="app.html">The App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="code.html">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ==== Main ==== -->
+    <main class="flex-shrink-0">
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 border-end border-2">
+                    <h1>MOHRBY: A Coding Project</h1>
+                    <h4 class="lead">
+                        Live life one loop at a time. A javascript coding exercise using loops.
+                        Write a program that displays the numbers from 0 to 100. Display the even numbers in <strong>bold</strong>.
+                        
+                    </h4>
+                    <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                    <p>Enter a Fizz value and a Buzz value. Press the button and the values will appear.</p>
+                </div>
+                <div class="col col-lg-8">
+                    <div>
+                        <h5>Enter Values</h5>
+                        <form class="row gy-2 gx-3">
+                            <div class="col">
+                                <input id="fizzValue" type="number" class="form-control" placeholder="fizz value" 
+                                    value=3 aria-label="Fizz Value">
+                            </div>
+                            <div class="col">
+                                <input id="buzzValue" type="number" class="form-control" placeholder="buzz value" 
+                                    value=5 aria-label="Buzz Value">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Do it!</button>
+                            </div>
+                        </form>
+                        <h2 class="m5-t border-bottom border-2">Results</h2>
+                        <div class="table-responsive">
+                            <table id="restable" class="table table-striped table-sm">
+                                <tbody id="resbody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==== Footer ==== -->
+    <footer class="footer mt-auto py-3 sticky-footer">  <!-- sticky-footer not in lesson  -->
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-3 gy-1">
+                <div class="col d-flex order-last order-lg-first text-light">
+                    <div>
+                        <span class="text-muted">&copy;2022 Chris Mohrbacher</span><br>
+                        <a class="social-link" href="mailto:camohr2012@gmail.com">camohr2012@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-center social">
+                    <a href="https://www.linkedin.com/in/chris-mohrbacher-b005927a" target="_blank">
+                        <img class="social-link" src="img/socialmedia/cm.png" alt="Chris Mohrbacher"> </a>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://github.com/camohr/mohrbacher" target="_blank">
+                                <i class="social-link fab fa-github fa-2x"> </i> </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/chris-mohrbacher-b005927a" target="_blank">
+                                <i class="social-link fab fa-linkedin fa-2x"> </i> </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <i class="social-link fab fa-twitter fa-2x"> </i> </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com" target="_blank">
+                                <i class="social-link fab fa-instagram fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <!-- ==== Boostrap JS ==== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <script src="js/site.js"></script>
+
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script></scrit>
+
+</body>
+</html>
